@@ -1,0 +1,82 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    font-size: 0.5rem;
+    font-weight: bold;
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin-left: 1.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #007bff;
+      }
+
+      .anticon {
+        margin-right: 0.3rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__logo {
+      display: none;
+    }
+
+    &__nav {
+      width: 90%;
+      
+      ul {
+        justify-content: space-between; /* 기능들을 균등하게 배치 */
+        width: 100%; 
+        padding: 0 1rem; 
+      }
+
+      li {
+        margin-left: 0; /* li 요소 간 간격 제거 */
+      }
+
+      a {
+        justify-content: center; /* 텍스트와 아이콘을 중앙에 정렬 */
+      }
+    }
+  }
+}
