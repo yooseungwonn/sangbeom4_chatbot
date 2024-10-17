@@ -14,7 +14,7 @@ import asyncio
 
 class RAGChain:
     def __init__(self, source_list=None):
-        self.pdf = PDFRetrievalChain(source_list).create_chain(True)
+        self.pdf = PDFRetrievalChain(source_list).create_chain()
         
         self.retriever = self.pdf.retriever
         self.retrieval_chain = self.pdf.chain
